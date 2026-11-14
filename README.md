@@ -30,10 +30,6 @@ To access this website-in-progress you can [**click here**](https://common-groun
 - Read about advice, ag experiments and wisdom that others share in the citizen science forum. 
 - Delete anything you create.  
 
-![screenshot of login page]
-![screenshot of profile page]
-![screenshot of anonymously named users]
-
 ### Tech Stack: 
 - Front-end: HTML, CSS, JavaScript 
 - Backend: Node.js, Express, EJS, passport
