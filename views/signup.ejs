@@ -1,38 +1,86 @@
 <%- include('partials/header') -%>
-    <main class="container">
-        <div class="row justify-content-center">
-            <section class="col-6 mt-5">
-                <% if (locals.messages.errors) { %>
-                    <% messages.errors.forEach( el => { %>
-                        <div class="alert alert-danger"><%= el.msg %></div>
-                    <% }) %>    
-                <% } %>
+    <main class="main-container">
+        <div class="signup-left">
+            <h1>Common Ground</h1>
+            <img src="/imgs/plant.jpg" alt="image of an animated plant">
+            <span>Rooted in Community</span>
+            <span>Secured for the future</span>
+        </div>
+        <div class="signup-right">
+            <h2>Sign Up Here!</h2>
+            <p>For security, please include <strong>two</strong> invite codes. This community protects itself by only allowing new users to sign-up if they have been invited by two current users.</p>
+            <section class="container">
+                <% if (locals.messages.errors) { %> <% messages.errors.forEach( el => { %>
+                    <div class="alert-danger">
+                        <%= el.msg %>
+                    </div> <% }) %> <% } %>
                 <% if (locals.messages.info) { %>
                     <% messages.info.forEach( el => { %>
-                        <div class="alert alert-info"><%= el.msg %></div>
-                    <% }) %>    
-                <% } %>
-                <form action="/signup" method="POST">
-                    <div class="mb-3">
-                        <label for="userName" class="form-label">User Name</label>
-                        <input type="text" class="form-control" id="userName" name="userName">
-                      </div>
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                      <label for="password" class="form-label">Password</label>
-                      <input type="password" class="form-control" id="password" name="password">
-                    </div>
-                    <div class="mb-3">
-                        <label for="confirmPassword" class="form-label">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
-                      </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </form>
+                    <div class="alert-info">
+                        <%= el.msg %>
+                    </div> <% }) %> <% } %>
+                    <form action="/signup" method="POST">
+                        <section class="signup-form">
+                            <section class="form-left">
+                            <label for="userName" class="form-label">Username</label>
+                            <input 
+                            type="text"
+                            class="form-input" 
+                            id="userName" 
+                            placeholder="Username"
+                            name="userName"/>
+                            <label for="name" class="form-label">Preferred Name</label>
+                            <input 
+                            type="text"
+                            class="form-input" 
+                            id="preferredName" 
+                            placeholder="Preferred Name"
+                            name="preferredName"/>
+                            <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                            <input 
+                            type="email" 
+                            class="form-input" 
+                            id="exampleInputEmail1"
+                            placeholder="Email Address" 
+                            aria-describedby="emailHelp" 
+                            name="email"/>
+                            <label for="password" class="form-label">Password</label>
+                            <input 
+                            type="password" 
+                            class="form-input" 
+                            id="password"
+                            placeholder="Password" 
+                            name="password">
+                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                            <input 
+                            type="password" 
+                            class="form-input" 
+                            id="confirmPassword"
+                            placeholder="Confirm Password" 
+                            name="confirmPassword">
+                        </section>
+                        <section class="form-right">
+                            <label for="inviteCode1" class="form-label">Invite Code 1:</label>
+                            <input 
+                            type="text" 
+                            class="form-input" 
+                            id="inviteCode1"
+                            placeholder="Invite Code 1" 
+                            name="inviteCode1">
+                            <label for="inviteCode2" class="form-label">Invite Code 2:</label>
+                            <input 
+                            type="text" 
+                            class="form-input" 
+                            id="inviteCode2"
+                            placeholder="Invite Code 1" 
+                            name="inviteCode2">
+                        </section>
+                        </section>
+                        <button type="submit" class="signup-btn">Submit</button>
+                      </form>
+                         
             </section>
+            <p>Already a user? <a href="/">Login here!</a></p>
         </div>
     </main>
 

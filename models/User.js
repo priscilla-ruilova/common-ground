@@ -3,10 +3,13 @@ const mongoose = require("mongoose");
 
 const UserSchema = new mongoose.Schema({
   userName: { type: String, unique: true },
+  preferredName: {type: String}, //added ONLY here
   email: { type: String, unique: true },
   password: String,
+  inviteCode1: { type: String, unique: true },
+  inviteCode2: { type: String, unique: true }
 });
-
+// PRISCILLA YOU LEFT OFF HEREEEEE!!!!!!!!!!!! 11.11.2026
 // Password hash middleware.
 
 UserSchema.pre("save", function save(next) {

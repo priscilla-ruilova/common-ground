@@ -1,11 +1,52 @@
 <%- include('partials/header') -%>
+    <main class="main-container">
+        <div class="title-left">
+            <h1>Common Ground</h1>
+            <img src="/imgs/plant.jpg" alt="image of an animated plant">
+            <span>Rooted in Community | Secured for the future</span>
 
-<main class="container">
-    <div class="row justify-content-around mt-5">
-        <a href="/login" class="col-3 btn btn-primary"> Login</a>
-        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
-    </div>
-</main>
-    
+        </div>
+        <div class="login-right">
+            <h2>Welcome Back!</h2>
+            <p>Log in to access your profile, add resources and manage your data securely.</p>
+            <section class="container">
+                <% if (locals.messages.errors) { %> <% messages.errors.forEach( el=> { %>
+                        <div class="alert-danger">
+                            <%= el.msg %>
+                        </div><% }) %> <% } %>
+                <% if (locals.messages.info) { %>
+                    <% messages.info.forEach( el=> { %>
+                        <div class="alert-info">
+                            <%= el.msg %>
+                        </div> <% }) %> <% } %>
+                        <form action="/" method="POST">
+                            <section class="login-info">
+                                <label for="exampleInputEmail1" class="form-label">Email address:</label>
+                                <input 
+                                type="email" 
+                                class="form-input" 
+                                id="exampleInputEmail1" 
+                                placeholder="Email Address"
+                                aria-describedby="emailHelp"
+                                name="email"
+                                />
+                            </section>
+                            <section class="login-info">
+                                <label for="exampleInputPassword1" class="form-label">Password:</label>
+                                <input 
+                                type="password" 
+                                class="form-input"
+                                id="exampleInputPassword1" 
+                                placeholder="Password"
+                                name="password"
+                                />
+                            </section>
+                            <button type="submit" class="login-btn">Submit</button>
+                        </form>
+            </section>
+            <p>Not a user? <a href="/signup">Sign-up here!</a></p>
+        </div>
+    </main>
 
-<%- include('partials/footer') -%>
+
+    <%- include('partials/footer') -%>

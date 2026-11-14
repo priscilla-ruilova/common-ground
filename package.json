@@ -1,13 +1,13 @@
 {
-  "name": "binary-upload-boom",
+  "name": "Common Ground",
   "version": "1.0.0",
-  "description": "100Devs Social Network",
+  "description": "Land security & resource app for urban farmers",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Priscilla Ruilova",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
