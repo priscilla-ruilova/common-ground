@@ -16,14 +16,18 @@ Common Ground is breaking this cycle, by providing a community-trusted communica
     - The information will be generalized, limited to the number of affected vacant lots in their respective district. This is a security check to prevent land speculators from potentially accessing information about land that is already used and managed by community members.
 - This app will offer a ciitzen science forum so that advice, growing techniques, and wisdom from diverse communities can be collected and offered back to the user community.
 
+### Live Link
+
+To access this website-in-progress you can [**click here**](https://common-ground-q46x.onrender.com/).
+
 ![screenshot of the home page](/public/imgs/screenshotHomePage.png)
 
 ### How to Use:
-- Create a login with a community 'check' so that this app can safely invite other users. 
+- Create a login with a community 'check' so that the full app can only be accessed by users with invite codes from current users. 
 - View the Resource Map to see what districts other users are located and available resources.
-- View the tax foreclosure map to monitor if land that you're stewarding is potentially at risk. 
+- View the tax foreclosure service to check if land that you're stewarding is at risk and add it to your land tracker in your profile. 
 - Use a form to submit resources. Add as many as you like!
-- Read about advice, ag experiments and wisdom that others share. 
+- Read about advice, ag experiments and wisdom that others share in the citizen science forum. 
 - Delete anything you create.  
 
 ![screenshot of login page]
@@ -36,5 +40,5 @@ Common Ground is breaking this cycle, by providing a community-trusted communica
 - Database: MongoDB
 
 ### How to run project: 
-- Diployed site coming soon.
-- This is a work in progress!
+- **This is a work in progress**
+- Stay tuned for more working features!
